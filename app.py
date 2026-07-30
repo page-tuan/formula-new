@@ -26,7 +26,7 @@ def load_data(file_path):
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
                 
-        df = df.fillna('未分類')
+        df = df.fillna('')
         return df
     except Exception as e:
         st.error(f"讀取資料時發生錯誤：{e}")
